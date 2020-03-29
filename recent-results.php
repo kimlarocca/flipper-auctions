@@ -4,7 +4,7 @@ $pageID = $listingsPage;
 ?>
 <?php
 if (!function_exists("GetSQLValueString")) {
-function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "") 
+function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "")
 {
   if (PHP_VERSION < 6) {
     $theValue = get_magic_quotes_gpc() ? stripslashes($theValue) : $theValue;
@@ -15,7 +15,7 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
   switch ($theType) {
     case "text":
       $theValue = ($theValue != "") ? "'" . $theValue . "'" : "NULL";
-      break;    
+      break;
     case "long":
     case "int":
       $theValue = ($theValue != "") ? intval($theValue) : "NULL";
@@ -34,23 +34,21 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
 }
 }
 
-mysql_select_db($database_cms, $cms);
+mysqli_select_db($cms, $database_cms);
 $query_Recordset1 = "SELECT * FROM listings  LEFT JOIN (SELECT photoAlbums.albumID,photoAlbums.coverPhotoID,photoAlbums.albumName,photos.id,photos.file_name FROM photoAlbums,photos WHERE photoAlbums.coverPhotoID=photos.id)  AS a ON listings.albumID=a.albumID  WHERE listings.propertyStatus = 'Sold' AND listings.websiteID = ".$websiteID;
-$Recordset1 = mysql_query($query_Recordset1, $cms) or die(mysql_error());
-$row_Recordset1 = mysql_fetch_assoc($Recordset1);
-$totalRows_Recordset1 = mysql_num_rows($Recordset1);
+$Recordset1 = mysqli_query($query_Recordset1, $cms) or die(mysqli_error($cms));
+$row_Recordset1 = mysqli_fetch_assoc($Recordset1);
+$totalRows_Recordset1 = mysqli_num_rows($Recordset1);
 
-mysql_select_db($database_cms, $cms);
 $query_currentPage = "SELECT * FROM cmsPages WHERE pageID = ".$pageID;
-$currentPage = mysql_query($query_currentPage, $cms) or die(mysql_error());
-$row_currentPage = mysql_fetch_assoc($currentPage);
-$totalRows_currentPage = mysql_num_rows($currentPage);
+$currentPage = mysqli_query($query_currentPage, $cms) or die(mysqli_error($cms));
+$row_currentPage = mysqli_fetch_assoc($currentPage);
+$totalRows_currentPage = mysqli_num_rows($currentPage);
 
-mysql_select_db($database_cms, $cms);
 $query_websiteInfo = "SELECT * FROM cmsWebsites WHERE websiteID = ".$websiteID;
-$websiteInfo = mysql_query($query_websiteInfo, $cms) or die(mysql_error());
-$row_websiteInfo = mysql_fetch_assoc($websiteInfo);
-$totalRows_websiteInfo = mysql_num_rows($websiteInfo);
+$websiteInfo = mysqli_query($query_websiteInfo, $cms) or die(mysqli_error($cms));
+$row_websiteInfo = mysqli_fetch_assoc($websiteInfo);
+$totalRows_websiteInfo = mysqli_num_rows($websiteInfo);
 ?>
 <?php
 $pageTitle = "Recent Results";
@@ -60,13 +58,13 @@ $pageTitle = "Recent Results";
 <head>
 <!-- InstanceBeginEditable name="doctitle" -->
 <title><?php echo $row_websiteInfo['firstName']; ?> <?php echo $row_websiteInfo['lastName']; ?> | <?php echo $pageTitle ?></title>
-<!-- InstanceEndEditable --> 
+<!-- InstanceEndEditable -->
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <link rel="stylesheet" type="text/css" href="styles/styles-old.css">
 <link href="styles/styles.css" rel="stylesheet" type="text/css">
 <!-- InstanceBeginEditable name="head" -->
 <link rel="stylesheet" type="text/css" href="styles/masonry.css"/>
- 
+
 
 <!-- InstanceEndEditable -->
 <script src="foo.js" type="text/javascript"></script>
@@ -117,22 +115,22 @@ $pageTitle = "Recent Results";
       <tr>
         <td width="20">&nbsp;</td><td align="left" valign="top">
         <!-- InstanceBeginEditable name="main" -->
-  
+
   <h1 class="wf_centered" style="padding-top:15px; text-align:center"><?php echo $pageTitle; ?></h1>
-    
-    <!-- listings grid --> 
+
+    <!-- listings grid -->
     <!-- grid -->
     <div class="masonry js-masonry"  data-masonry-options='{ "isFitWidth": true }'>
       <?php do { ?>
         <div class="item"><a href="listing-details.php?listingID=<?php echo $row_Recordset1['listingID']; ?>">
           <div class="overlay-item">
             <div class="item-image">
-              <?php  
-		if ($row_Recordset1['coverPhotoID'] == NULL){ 
+              <?php
+		if ($row_Recordset1['coverPhotoID'] == NULL){
 		?>
               <img src="http://4siteusa.com/uploads/comingsoon.jpg">
               <?php
-		} else {			
+		} else {
 		?>
               <img src="http://4siteusa.com/uploads/thumb-<?php echo $row_Recordset1['file_name']; ?>">
               <?php
@@ -142,7 +140,7 @@ $pageTitle = "Recent Results";
             <div class="item-title">
               <h2><?php echo $row_Recordset1['shortDescription']; ?></h2>
             </div>
-            
+
             <p>Date: <?php echo $row_Recordset1['propertyType']; ?><br />
               Time: <?php echo $row_Recordset1['propertyStyle']; ?></p><hr />
 <p>Location: <?php echo $row_Recordset1['propertyLocation']; ?></p>
@@ -173,9 +171,9 @@ $pageTitle = "Recent Results";
   </tr>
 </table>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
-<!-- InstanceBeginEditable name="scripts" --> <script type="text/javascript" src="scripts/masonry.pkgd.min.js"></script> 
-<script type="text/javascript" src="scripts/imagesloaded.pkgd.min.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<!-- InstanceBeginEditable name="scripts" --> <script type="text/javascript" src="scripts/masonry.pkgd.min.js"></script>
+<script type="text/javascript" src="scripts/imagesloaded.pkgd.min.js"></script>
 <script>
 $(document).ready(function() {
   // initiallize masonry
@@ -186,7 +184,7 @@ $(document).ready(function() {
   });
   $container.masonry('bindResize');
 });
-</script> <!-- InstanceEndEditable --> 
+</script> <!-- InstanceEndEditable -->
 
 </body>
 <!-- InstanceEnd --></html>

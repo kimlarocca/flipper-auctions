@@ -6,7 +6,7 @@ $albumID = 5;
 ?>
 <?php
 if (!function_exists("GetSQLValueString")) {
-function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "") 
+function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "")
 {
   if (PHP_VERSION < 6) {
     $theValue = get_magic_quotes_gpc() ? stripslashes($theValue) : $theValue;
@@ -17,7 +17,7 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
   switch ($theType) {
     case "text":
       $theValue = ($theValue != "") ? "'" . $theValue . "'" : "NULL";
-      break;    
+      break;
     case "long":
     case "int":
       $theValue = ($theValue != "") ? intval($theValue) : "NULL";
@@ -36,23 +36,21 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
 }
 }
 
-mysql_select_db($database_cms, $cms);
+mysqli_select_db($cms, $database_cms);
 $query_Recordset1 = "SELECT * FROM photos WHERE albumID = ".$albumID." ORDER BY photoSequence ASC";
-$Recordset1 = mysql_query($query_Recordset1, $cms) or die(mysql_error());
-$row_Recordset1 = mysql_fetch_assoc($Recordset1);
-$totalRows_Recordset1 = mysql_num_rows($Recordset1);
+$Recordset1 = mysqli_query($query_Recordset1, $cms) or die(mysqli_error($cms));
+$row_Recordset1 = mysqli_fetch_assoc($Recordset1);
+$totalRows_Recordset1 = mysqli_num_rows($Recordset1);
 
-mysql_select_db($database_cms, $cms);
 $query_currentPage = "SELECT * FROM cmsPages WHERE pageID = ".$pageID;
-$currentPage = mysql_query($query_currentPage, $cms) or die(mysql_error());
-$row_currentPage = mysql_fetch_assoc($currentPage);
-$totalRows_currentPage = mysql_num_rows($currentPage);
+$currentPage = mysqli_query($query_currentPage, $cms) or die(mysqli_error($cms));
+$row_currentPage = mysqli_fetch_assoc($currentPage);
+$totalRows_currentPage = mysqli_num_rows($currentPage);
 
-mysql_select_db($database_cms, $cms);
 $query_websiteInfo = "SELECT * FROM cmsWebsites WHERE websiteID = ".$websiteID;
-$websiteInfo = mysql_query($query_websiteInfo, $cms) or die(mysql_error());
-$row_websiteInfo = mysql_fetch_assoc($websiteInfo);
-$totalRows_websiteInfo = mysql_num_rows($websiteInfo);
+$websiteInfo = mysqli_query($query_websiteInfo, $cms) or die(mysqli_error($cms));
+$row_websiteInfo = mysqli_fetch_assoc($websiteInfo);
+$totalRows_websiteInfo = mysqli_num_rows($websiteInfo);
 ?>
 <?php
 $pageTitle = $row_currentPage['pageTitle'];
@@ -62,14 +60,14 @@ $pageTitle = $row_currentPage['pageTitle'];
 <head>
 <!-- InstanceBeginEditable name="doctitle" -->
 <title><?php echo $row_websiteInfo['firstName']; ?> <?php echo $row_websiteInfo['lastName']; ?> | <?php echo $row_currentPage['pageTitle']; ?></title>
-<!-- InstanceEndEditable --> 
+<!-- InstanceEndEditable -->
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <link rel="stylesheet" type="text/css" href="styles/styles-old.css">
 <link href="styles/styles.css" rel="stylesheet" type="text/css">
 <!-- InstanceBeginEditable name="head" -->
 <link rel="stylesheet" type="text/css" href="styles/masonry.css"/>
 
-<script type="text/javascript" src="scripts/masonry.pkgd.min.js"></script> 
+<script type="text/javascript" src="scripts/masonry.pkgd.min.js"></script>
 <script type="text/javascript" src="scripts/imagesloaded.pkgd.min.js"></script>
 <script>
 $(document).ready(function() {
@@ -132,7 +130,7 @@ $(document).ready(function() {
 
 <!-- grid -->
   <div class="masonry js-masonry"  data-masonry-options='{ "isFitWidth": true }'>
-    
+
   <?php do { ?>
   <div class="item">
       <div class="overlay-item">
@@ -141,14 +139,14 @@ $(document).ready(function() {
         <div class="item-title">
           <h2><?php echo $row_Recordset1['photoTitle']; ?></h2>
         </div>
-        <?php 
-		} 
+        <?php
+		}
 		if ($row_Recordset1['photoDescription'] != ''){
 		?>
 		<p><?php echo $row_Recordset1['photoDescription']; ?></p>
-        <?php 
-		} 
-		?>   
+        <?php
+		}
+		?>
       </div>
     </div>
     <?php } while ($row_Recordset1 = mysql_fetch_assoc($Recordset1)); ?>
@@ -176,8 +174,8 @@ $(document).ready(function() {
   </tr>
 </table>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
-<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable -->
 
 </body>
 <!-- InstanceEnd --></html>
