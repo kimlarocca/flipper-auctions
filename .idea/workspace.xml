@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21ed8c26-f1e3-44a3-8325-4c16e1e20443" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Connections/cms.php" beforeDir="false" afterPath="$PROJECT_DIR$/Connections/cms.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,11 +47,17 @@
       <option name="presentableId" value="Default" />
       <updated>1585522145357</updated>
       <workItem from="1585522146949" duration="780000" />
-      <workItem from="1588026494879" duration="536000" />
+      <workItem from="1588026494879" duration="698000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="745" y="177" key="search.everywhere.popup" timestamp="1588030183707">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state x="745" y="177" key="search.everywhere.popup/0.23.1440.830@0.23.1440.830" timestamp="1588030183707" />
   </component>
 </project>
