@@ -6,7 +6,11 @@ $hostname_cms = "localhost";
 $database_cms = "kim_4site";
 $username_cms = "kim_larocca";
 $password_cms = "Lotus18641864!";
-$cms = mysqli_connect($hostname_cms, $username_cms, $password_cms, $database_cms) or trigger_error(mysqli_error(),E_USER_ERROR);
+$cms = mysqli_connect($hostname_cms, $username_cms, $password_cms, $database_cms);
+if (mysqli_connect_errno()) {
+    printf("Connect failed: %s\n", mysqli_connect_error());
+    exit();
+}
 $websiteID = 14;
 $idxLink = 'http://fl.living.net/idxfirm/1013251';
 $homePage = 79;
