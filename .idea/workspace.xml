@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21ed8c26-f1e3-44a3-8325-4c16e1e20443" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/listing-details.php" beforeDir="false" afterPath="$PROJECT_DIR$/listing-details.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/listings.php" beforeDir="false" afterPath="$PROJECT_DIR$/listings.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/localInfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/localInfo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/online-bidding.php" beforeDir="false" afterPath="$PROJECT_DIR$/online-bidding.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/preview.php" beforeDir="false" afterPath="$PROJECT_DIR$/preview.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recent-results.php" beforeDir="false" afterPath="$PROJECT_DIR$/recent-results.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search.php" beforeDir="false" afterPath="$PROJECT_DIR$/search.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/selling-at-auction.php" beforeDir="false" afterPath="$PROJECT_DIR$/selling-at-auction.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template-photoAlbum.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-photoAlbum.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/template.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Connections/cms.php" beforeDir="false" afterPath="$PROJECT_DIR$/Connections/cms.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,9 +11,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ComposerSettings">
-    <execution>
-      <executable />
-    </execution>
+    <execution />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -33,14 +20,20 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -52,11 +45,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1585522145357</updated>
-      <workItem from="1585522146949" duration="589000" />
+      <workItem from="1585522146949" duration="780000" />
+      <workItem from="1588026494879" duration="231000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
 </project>
