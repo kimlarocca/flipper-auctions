@@ -249,9 +249,9 @@ jQuery(document).ready(function() {
 </body>
 <!-- InstanceEnd --></html>
 <?php
-mysql_free_result($listing);
+mysqli_free_result($listing);
 
-//mysql_free_result($photos);
+//mysqli_free_result($photos);
 
-mysql_free_result($websiteInfo);
+mysqli_free_result($websiteInfo);
 ?>

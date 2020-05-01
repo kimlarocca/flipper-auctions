@@ -10,7 +10,7 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
     $theValue = get_magic_quotes_gpc() ? stripslashes($theValue) : $theValue;
   }
 
-  $theValue = function_exists("mysql_real_escape_string") ? mysqli_real_escape_string($theValue) : mysqli_escape_string($theValue);
+  $theValue = function_exists("mysqli_real_escape_string") ? mysqli_real_escape_string($theValue) : mysqli_escape_string($theValue);
 
   switch ($theType) {
     case "text":
@@ -210,9 +210,9 @@ function MM_validateForm() { //v4.0
 </body>
 <!-- InstanceEnd --></html>
 <?php
-mysql_free_result($Recordset1);
+mysqli_free_result($Recordset1);
 
-mysql_free_result($currentPage);
+mysqli_free_result($currentPage);
 
-mysql_free_result($websiteInfo);
+mysqli_free_result($websiteInfo);
 ?>

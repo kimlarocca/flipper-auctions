@@ -137,7 +137,7 @@ $pageTitle = $row_currentPage['pageTitle'];
 </body>
 <!-- InstanceEnd --></html>
 <?php
-mysql_free_result($currentPage);
+mysqli_free_result($currentPage);
 
-mysql_free_result($websiteInfo);
+mysqli_free_result($websiteInfo);
 ?>

@@ -4,7 +4,7 @@ $pageID = 8;
 ?>
 <?php
 if (!function_exists("GetSQLValueString")) {
-function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "") 
+function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "")
 {
   if (PHP_VERSION < 6) {
     $theValue = get_magic_quotes_gpc() ? stripslashes($theValue) : $theValue;
@@ -15,7 +15,7 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
   switch ($theType) {
     case "text":
       $theValue = ($theValue != "") ? "'" . $theValue . "'" : "NULL";
-      break;    
+      break;
     case "long":
     case "int":
       $theValue = ($theValue != "") ? intval($theValue) : "NULL";
@@ -84,7 +84,7 @@ $pageTitle = $row_currentPage['pageTitle'];
     </nav>
   </div>
 </div>
-<!-- /container --> 
+<!-- /container -->
 
 <!-- main content -->
 <div class="content"> <!-- TemplateBeginEditable name="mainContent" -->
@@ -109,12 +109,12 @@ $pageTitle = $row_currentPage['pageTitle'];
     </div>
   </div>
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
-<!-- TemplateBeginEditable name="scripts" --> <!-- TemplateEndEditable --> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<!-- TemplateBeginEditable name="scripts" --> <!-- TemplateEndEditable -->
 <script src="../scripts/scripts.js"></script>
 </body>
 </html>
 <?php
-mysql_free_result($currentPage);
-mysql_free_result($websiteInfo);
+mysqli_free_result($currentPage);
+mysqli_free_result($websiteInfo);
 ?>
