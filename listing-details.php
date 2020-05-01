@@ -40,19 +40,19 @@ if (isset($_GET['listingID'])) {
 }
 mysqli_select_db($cms, $database_cms);
 $query_listing = sprintf("SELECT * FROM listings  LEFT JOIN (SELECT photoAlbums.albumID,photoAlbums.coverPhotoID,photoAlbums.albumName,photos.id,photos.file_name FROM photoAlbums,photos WHERE photoAlbums.coverPhotoID=photos.id)  AS a ON listings.albumID=a.albumID  WHERE listingID = %s", GetSQLValueString($colname_listing, "int"));
-$listing = mysqli_query($query_listing, $cms) or die(mysqli_error($cms));
+$listing = mysqli_query($cms, $query_listing) or die(mysqli_error($cms));
 $row_listing = mysqli_fetch_assoc($listing);
 $totalRows_listing = mysqli_num_rows($listing);
 
 if ($row_listing['albumID'] != NULL){
     $query_photos = "SELECT * FROM photos WHERE albumID = ".$row_listing['albumID']." ORDER BY photoSequence ASC";
-    $photos = mysqli_query($query_photos, $cms) or die(mysqli_error($cms));
+    $photos = mysqli_query($cms, $query_photos) or die(mysqli_error($cms));
     $row_photos = mysqli_fetch_assoc($photos);
     $totalRows_photos = mysqli_num_rows($photos);
 }
 
 $query_websiteInfo = "SELECT * FROM cmsWebsites WHERE websiteID = ".$websiteID;
-$websiteInfo = mysqli_query($query_websiteInfo, $cms) or die(mysqli_error($cms));
+$websiteInfo = mysqli_query($cms, $query_websiteInfo) or die(mysqli_error($cms));
 $row_websiteInfo = mysqli_fetch_assoc($websiteInfo);
 $totalRows_websiteInfo = mysqli_num_rows($websiteInfo);
 ?>
