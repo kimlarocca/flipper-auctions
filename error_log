@@ -15206,7 +15206,7 @@
  in /home/flipperauctions/public_html/listing-details.php on line 134
 [21-Feb-2020 17:17:55 UTC] PHP Warning:  getimagesize(http://4siteusa.com/uploads/311-1452779295-1997 Lincoln Towncar.JPG): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
  in /home/flipperauctions/public_html/listing-details.php on line 134
-[27-Feb-2020 07:14:45 UTC] PHP Warning:  mysql_pconnect(): No such file or directory in /home/flipperauctions/public_html/Connections/cms.php on line 9
+[27-Feb-2020 07:14:45 UTC] PHP Warning:  mysqli_pconnect(): No such file or directory in /home/flipperauctions/public_html/Connections/cms.php on line 9
 [27-Feb-2020 07:14:45 UTC] PHP Fatal error:  No such file or directory in /home/flipperauctions/public_html/Connections/cms.php on line 9
 [02-Mar-2020 15:58:00 UTC] PHP Warning:  getimagesize(http://4siteusa.com/uploads/311-1452779287-china cabinet.JPG): failed to open stream: HTTP request failed! HTTP/1.1 400 Bad Request
  in /home/flipperauctions/public_html/listing-details.php on line 134

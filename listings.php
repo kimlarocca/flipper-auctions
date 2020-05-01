@@ -10,7 +10,7 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
     $theValue = get_magic_quotes_gpc() ? stripslashes($theValue) : $theValue;
   }
 
-  $theValue = function_exists("mysql_real_escape_string") ? mysql_real_escape_string($theValue) : mysql_escape_string($theValue);
+  $theValue = function_exists("mysqli_real_escape_string") ? mysqli_real_escape_string($theValue) : mysqli_escape_string($theValue);
 
   switch ($theType) {
     case "text":
@@ -147,7 +147,7 @@ $pageTitle = $row_currentPage['pageTitle'];
             <div class="wf_centered" class="wf_margin20"><a class="button" href="listing-details.php?listingID=<?php echo $row_Recordset1['listingID']; ?>">view details</a></div>
           </div>
           </a> </div>
-        <?php } while ($row_Recordset1 = mysql_fetch_assoc($Recordset1)); ?>
+        <?php } while ($row_Recordset1 = mysqli_fetch_assoc($Recordset1)); ?>
     </div>
   <!-- InstanceEndEditable --></td>
         <td width="20">&nbsp;</td>

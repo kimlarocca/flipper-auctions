@@ -2,7 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21ed8c26-f1e3-44a3-8325-4c16e1e20443" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/contact.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/template.dwt - Copy.php" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/template.dwt - Copy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about.php" beforeDir="false" afterPath="$PROJECT_DIR$/about.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auction-advantages.php" beforeDir="false" afterPath="$PROJECT_DIR$/auction-advantages.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auction-process.php" beforeDir="false" afterPath="$PROJECT_DIR$/auction-process.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/error_log" beforeDir="false" afterPath="$PROJECT_DIR$/error_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/listing-details.php" beforeDir="false" afterPath="$PROJECT_DIR$/listing-details.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/listings.php" beforeDir="false" afterPath="$PROJECT_DIR$/listings.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/localInfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/localInfo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/online-bidding.php" beforeDir="false" afterPath="$PROJECT_DIR$/online-bidding.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/preview.php" beforeDir="false" afterPath="$PROJECT_DIR$/preview.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recent-results.php" beforeDir="false" afterPath="$PROJECT_DIR$/recent-results.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search.php" beforeDir="false" afterPath="$PROJECT_DIR$/search.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/selling-at-auction.php" beforeDir="false" afterPath="$PROJECT_DIR$/selling-at-auction.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +68,10 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="422" y="148" width="596" height="580" key="find.popup" timestamp="1588363943046">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state x="422" y="148" width="596" height="580" key="find.popup/0.23.1440.830@0.23.1440.830" timestamp="1588363943046" />
     <state x="745" y="177" key="search.everywhere.popup" timestamp="1588030183707">
       <screen x="0" y="23" width="1440" height="830" />
     </state>

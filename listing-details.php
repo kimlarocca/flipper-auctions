@@ -10,7 +10,7 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
     $theValue = get_magic_quotes_gpc() ? stripslashes($theValue) : $theValue;
   }
 
-  $theValue = function_exists("mysql_real_escape_string") ? mysql_real_escape_string($theValue) : mysql_escape_string($theValue);
+  $theValue = function_exists("mysqli_real_escape_string") ? mysqli_real_escape_string($theValue) : mysqli_escape_string($theValue);
 
   switch ($theType) {
     case "text":
@@ -130,7 +130,7 @@ if ($totalRows_photos>0){
   list($width, $height) = getimagesize('http://4siteusa.com/uploads/'.$row_photos['file_name']);
   ?>
     <div class="gallery-cell" style="width:<?php echo $width ?>px; height:auto;"><img width="<?php echo $width ?>" height="<?php echo $height ?>" src="http://4siteusa.com/uploads/<?php echo $row_photos['file_name']; ?>"/></div>
-    <?php } while ($row_photos = mysql_fetch_assoc($photos)); ?>
+    <?php } while ($row_photos = mysqli_fetch_assoc($photos)); ?>
   </div>
   <?php
 }
